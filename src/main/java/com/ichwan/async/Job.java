@@ -22,4 +22,9 @@ public class Job {
     public Long getAtomicLong() {
         return atomicLong.get();
     }
+
+    @Scheduled(cron = "*/2 * * * * *")
+    public void cronJob() {
+        log.info("run cron job");
+    }
 }
