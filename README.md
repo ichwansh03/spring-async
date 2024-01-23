@@ -6,6 +6,12 @@
 * Scheduled akan otomatis dijalankan ketika spring running, berbeda dengan Async.
 * Cron job digunakan untuk eksekusi scheduled, menggunakan ekspresi `* * * * * *` yg berarti ekspresi tersebut akan dieksekusi setiap detik. Gunakan template cron berikut [Crontab](https://crontab.guru/)
 
+## Spring Webflux
+
+* Spring webflux adalah aplikasi spring pada web yang reactive, berbeda dengan spring web mvc pada umumnya. Reactive disini artinya teknik programming yg menggunakan metode async dan non-blocking.
+* Webflux dalam case example biasanya sering digunakan pada aplikasi web yg mengalami bottleneck pada proses I/O atau proses input-outputnya lambat. Ketimbang membuat thread untuk semua request, kita cukup gunakan thread yg ada di processor lalu satu thread itu dijalankan secara bergantian/non-blocking. kecuali jika terdapat proses non-I/O (CPU bound) tidak perlu gunakan webflux.
+* Dokumentasi spring webflux [Docs](https://docs.spring.io/spring-framework/reference/web/webflux.html) 
+
 ## Spring Monitoring
 
 * Di Spring, terdapat fitur untuk monitoring endpoint, namanya Spring Actuator
