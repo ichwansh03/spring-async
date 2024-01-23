@@ -14,4 +14,4 @@
 
 ## Spring Monitoring
 
-* Di Spring, terdapat fitur untuk monitoring endpoint, namanya Spring Actuator
+* Di Spring, terdapat fitur untuk monitoring endpoint, namanya Spring Actuator. Tambahkan dependenct spring boot starter actuator, lalu akses dengan `localhost:8080/actuator`
