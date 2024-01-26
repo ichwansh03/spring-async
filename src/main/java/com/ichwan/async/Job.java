@@ -13,7 +13,7 @@ public class Job {
 
     private AtomicLong atomicLong = new AtomicLong(0);
 
-    @Scheduled(timeUnit = TimeUnit.SECONDS, initialDelay = 3, fixedDelay = 2)
+    //@Scheduled(timeUnit = TimeUnit.SECONDS, initialDelay = 3, fixedDelay = 2)
     public void job() {
         Long value = atomicLong.incrementAndGet();
         log.info("job value: {}", value);
@@ -23,7 +23,7 @@ public class Job {
         return atomicLong.get();
     }
 
-    @Scheduled(cron = "*/2 * * * * *")
+    //@Scheduled(cron = "*/2 * * * * *")
     public void cronJob() {
         log.info("run cron job");
     }
