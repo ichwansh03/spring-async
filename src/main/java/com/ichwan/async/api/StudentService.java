@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.time.Duration;
+
 /**
  * @author Ichwan
  * Pada reactive, Flux<> digunakan untuk menampung list, jika single object gunakan Mono<>
@@ -16,7 +18,8 @@ public class StudentService {
     private final StudentRepository studentRepository;
 
     public Flux<Student> getAll() {
-        return studentRepository.findAll();
+        return studentRepository.findAll()
+                .delayElements(Duration.ofSeconds(1));
     }
 
     public Mono<Student> getById(Long id){

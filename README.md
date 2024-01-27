@@ -12,6 +12,8 @@
 * Webflux dalam case example biasanya sering digunakan pada aplikasi web yg mengalami bottleneck pada proses I/O atau proses input-outputnya lambat. Ketimbang membuat thread untuk semua request, kita cukup gunakan thread yg ada di processor lalu satu thread itu dijalankan secara bergantian/non-blocking. kecuali jika terdapat proses non-I/O (CPU bound) tidak perlu gunakan webflux.
 * Dokumentasi spring webflux [Docs](https://docs.spring.io/spring-framework/reference/web/webflux.html) 
 * Jika menggunakan spring reactive, database juga harus menggunakan r2dbc.
+* Spring reactive tidak support dengan automation db schema, jadi perlu menggunakan db migration tool seperti flyway db.
+
 ## Spring Monitoring
 
 * Di Spring, terdapat fitur untuk monitoring endpoint, namanya Spring Actuator. Tambahkan dependenct spring boot starter actuator, lalu akses dengan `localhost:8080/actuator`.
