@@ -1,5 +1,6 @@
 package com.ichwan.async.api;
 
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
@@ -23,7 +24,8 @@ public class StudentService {
     }
 
     public Mono<Student> getById(Long id){
-        return studentRepository.findById(id);
+        return studentRepository.findById(id)
+                .switchIfEmpty(Mono.error(new EntityNotFoundException("Student not found")));
     }
 
     public Mono<Student> create(StudentRequest request){
@@ -46,7 +48,8 @@ public class StudentService {
     }
 
     public Flux<Student> getByFirstname(String firstname){
-        return studentRepository.findAllByFirstnameIgnoreCase(firstname);
+        return studentRepository.findAllByFirstnameIgnoreCase(firstname)
+                .onErrorReturn(Student.builder().firstname("-").lastname("-").age(0).build());
     }
 
     public Mono<Void> delete(Long id){
