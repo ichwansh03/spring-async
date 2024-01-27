@@ -13,6 +13,7 @@
 * Dokumentasi spring webflux [Docs](https://docs.spring.io/spring-framework/reference/web/webflux.html) 
 * Jika menggunakan spring reactive, database juga harus menggunakan r2dbc.
 * Spring reactive tidak support dengan automation db schema, jadi perlu menggunakan db migration tool seperti flyway db.
+* Core dari spring reactive ada di publisher dan subscribernya, yakni penggunaan class Flux untuk collection resource dan class Mono untuk single resource
 
 ## Spring Monitoring
 
