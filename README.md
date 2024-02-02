@@ -20,3 +20,6 @@
 * Di Spring, terdapat fitur untuk monitoring endpoint, namanya Spring Actuator. Tambahkan dependenct spring boot starter actuator, lalu akses dengan `localhost:8080/actuator`.
 * Heapdump digunakan untuk mengecek apakah terdapat memory leak pada sebuah object atau tidak. Gunakan aplikasi Visual VM untuk melihat hasil download dari file heapdump.
 * Jika ingin memvisualisasikan actuator, gunakan [Micrometer](https://micrometer.io/) untuk melihat grafik metric
+
+Reference:
+[Getting Started with Spring Webflux](https://reflectoring.io/getting-started-with-spring-webflux/)
