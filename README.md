@@ -1,3 +1,5 @@
+[Introduction to Spring Scheduling and monitoring the task with Spring Actuator ️🕛️📈️](https://ichwansholihin.medium.com/create-scheduled-and-monitoring-tasks-with-scheduling-and-spring-actuator-b61aa38417eb)
+
 ## Spring Async
 
 * Untuk mengaktifkan fitur asynchronous pada spring, tambahkan anotasi `@EnableAsync` pada config class. Pada level method, tambahkan `@Async` untuk menandakan bahwa method tersebut harus dijalankan secara asynchronous.
